@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haider Ali - Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+<script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('headerContainer').innerHTML = data;
+            var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+            for (var i = 0; i < scripts.length; i++) {
+                eval(scripts[i].innerHTML);
+            }
+        });
+</script>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="slider">
+                <div class="slide active">
+                    <div class="hero-content">
+                        <h1>Welcome to My Portfolio</h1>
+                        <p>Front-End Developer & Designer</p>
+                        <a href="contact.html" class="hero-button">Hire Me</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="img/profile.png" alt="Hero Image 1">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="hero-content">
+                        <h1>Building Modern Websites</h1>
+                        <p>Creating Functional & Aesthetic Web Experiences</p>
+                        <a href="projects.html" class="hero-button">View Projects</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="img/profile.png" alt="Hero Image 2">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="hero-content">
+                        <h1>Responsive Web Design</h1>
+                        <p>Optimized for all devices</p>
+                        <a href="about.html" class="hero-button">Learn More</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="img/profile.png" alt="Hero Image 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="img/about-me.jpg" alt="Haider Ali">
+                    </div>
+                    <div class="about-text">
+                        <p>Hello! I'm Haider Ali, a passionate front-end developer and designer with a keen eye for creating beautiful, functional websites. With expertise in HTML, CSS, and JavaScript, I bring designs to life and ensure they're responsive across all devices.</p>
+                        <a href="about.html" class="button">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills-overview" class="section">
+            <div class="container">
+                <h2>Skills Overview</h2>
+                <p>As a front-end developer and designer, I've honed a diverse set of skills that allow me to create beautiful, functional, and user-friendly web experiences. Here's an overview of my key competencies:</p>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <i class="fas fa-code"></i>
+                        <h3>Front-End Development</h3>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Web Design</h3>
+                        <ul>
+                            <li>UI/UX Design</li>
+                            <li>Responsive Design</li>
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
+                            <li>Adobe Creative Suite</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Development</h3>
+                        <ul>
+                            <li>Responsive Web Design</li>
+                            <li>Progressive Web Apps</li>
+                            <li>Mobile-First Approach</li>
+                            <li>Touch-friendly Interfaces</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Recent Projects Section -->
+        <section id="recent-projects">
+            <div class="container">
+                <h2>Recent Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <img src="img/project1.jpg" alt="Project 1">
+                        <h3>E-commerce Website</h3>
+                        <p>A fully responsive online store with dynamic product listings and secure checkout.</p>
+                        <a href="projects.html#project1" class="button">View Project</a>
+                    </div>
+                    <div class="project-item">
+                        <img src="img/project2.jpg" alt="Project 2">
+                        <h3>Portfolio Site</h3>
+                        <p>A sleek, modern portfolio website showcasing a photographer's work.</p>
+                        <a href="projects.html#project2" class="button">View Project</a>
+                    </div>
+                    <div class="project-item">
+                        <img src="img/project3.jpg" alt="Project 3">
+                        <h3>Blog Platform</h3>
+                        <p>A customizable blog platform with a user-friendly content management system.</p>
+                        <a href="projects.html#project3" class="button">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>30+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <div class="container">
+                <h2>What Clients Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p>"Haider's work exceeded our expectations. He delivered a beautiful, functional website that perfectly captures our brand."</p>
+                        - John Doe, CEO of TechCorp
+                    </div>
+                    <div class="testimonial">
+                        <p>"Working with Haider was a pleasure. His attention to detail and creative solutions made our project a success."</p>
+                        - Jane Smith, Marketing Director
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="cta">
+            <div class="container">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's work together to bring your vision to life!</p>
+                <a href="contact.html" class="button">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+   
+</body>
+</html>

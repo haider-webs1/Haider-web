@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Haider Ali - Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="about-hero" class="hero-section">
+            <div class="container">
+                <h1>About Me</h1>
+                <p>Passionate Front-End Developer & Designer</p>
+            </div>
+        </section>
+
+        <!-- Personal Info Section -->
+        <section id="personal-info" class="section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-image">
+                        <img src="img/profile.png" alt="Haider Ali">
+                    </div>
+                    <div class="info-content">
+                        <h2>Haider Ali</h2>
+                        <p class="job-title">Front-End Developer & UI/UX Designer</p>
+                        <p class="bio">With over 5 years of experience in web development and design, I specialize in creating responsive, user-friendly websites that not only look great but also perform exceptionally well. My passion lies in bridging the gap between aesthetics and functionality, ensuring that every project I undertake is both visually appealing and technically sound.</p>
+                        <ul class="social-links">
+                            <li><a href="#" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-github"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>My Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <h3>Front-End Development</h3>
+                        <p>HTML5, CSS3, JavaScript, React.js, Vue.js</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>Figma, Adobe XD, Sketch, User Research</p>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Responsive Design</h3>
+                        <p>Mobile-First Approach, Cross-Browser Compatibility</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Senior Front-End Developer</h3>
+                            <p class="company">TechInnovate Solutions</p>
+                            <p class="date">2020 - Present</p>
+                            <ul>
+                                <li>Lead a team of 5 developers in creating responsive web applications</li>
+                                <li>Implemented modern front-end architectures using React and Vue.js</li>
+                                <li>Improved website performance by 40% through optimization techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>UI/UX Designer</h3>
+                            <p class="company">DesignCraft Studio</p>
+                            <p class="date">2018 - 2020</p>
+                            <ul>
+                                <li>Designed user interfaces for web and mobile applications</li>
+                                <li>Conducted user research and usability testing</li>
+                                <li>Collaborated with development teams to ensure design implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Junior Web Developer</h3>
+                            <p class="company">WebSphere Inc.</p>
+                            <p class="date">2016 - 2018</p>
+                            <ul>
+                                <li>Developed and maintained websites for various clients</li>
+                                <li>Worked with HTML, CSS, and JavaScript to create responsive layouts</li>
+                                <li>Assisted in the implementation of content management systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-grid">
+                    <div class="education-item">
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <p class="school">University of Technology</p>
+                        <p class="date">2012 - 2016</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>Full Stack Web Development Bootcamp</h3>
+                        <p class="school">CodeCamp Academy</p>
+                        <p class="date">2016</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="cta" class="section">
+            <div class="container">
+                <h2>Let's Work Together</h2>
+                <p>I'm always open to new opportunities and exciting projects.</p>
+                <a href="contact.html" class="cta-button">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+</body>
+</html>

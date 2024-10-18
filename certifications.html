@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/certifications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Certifications Hero Section -->
+        <section id="certifications-hero" class="hero-section">
+            <div class="container">
+                <h1>My Certifications</h1>
+                <p>Demonstrating expertise and continuous learning in web development and design</p>
+            </div>
+        </section>
+
+        <!-- Certifications Overview -->
+        <section id="certifications-overview" class="section">
+            <div class="container">
+                <h2>Professional Growth Through Certifications</h2>
+                <p>As a dedicated professional in the field of web development and design, I am committed to continuous learning and staying up-to-date with the latest technologies and best practices. The certifications below represent my ongoing journey of professional development and expertise in various areas of my field.</p>
+            </div>
+        </section>
+
+        <!-- Certifications Grid -->
+        <section id="certifications-grid" class="section">
+            <div class="container">
+                <div class="certifications-container">
+                    <div class="certification-item">
+                        <img src="img/certificate1.jpg" alt="Front-End Web Developer Certification">
+                        <div class="certification-details">
+                            <h3>Front-End Web Developer</h3>
+                            <p class="issuer">Udacity</p>
+                            <p class="date">Issued: June 2022</p>
+                            <a href="#" class="btn-view">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certification-item">
+                        <img src="img/certificate2.jpg" alt="React Developer Certification">
+                        <div class="certification-details">
+                            <h3>React Developer</h3>
+                            <p class="issuer">Meta (Facebook)</p>
+                            <p class="date">Issued: September 2022</p>
+                            <a href="#" class="btn-view">View Certificate</a>
+                        </div>
+                    </div>
+                    <div class="certification-item">
+                        <img src="img/certificate1.jpg" alt="UX Design Certification">
+                        <div class="certification-details">
+                            <h3>UX Design</h3>
+                            <p class="issuer">Google</p>
+                            <p class="date">Issued: January 2023</p>
+                            <a href="#" class="btn-view">View Certificate</a>
+                        </div>
+                    </div>
+                  
+                    <!-- I will Add more certification items as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Acquired -->
+        <section id="skills-acquired" class="section">
+            <div class="container">
+                <h2>Key Skills Acquired</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <h3>Advanced HTML5 & CSS3</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript ES6+</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <h3>React.js Development</h3>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Responsive Web Design</h3>
+                    </div>
+                    
+                 
+                </div>
+            </div>
+        </section>
+
+        <!-- Certification Benefits -->
+        <section id="certification-benefits" class="section">
+            <div class="container">
+                <h2>How These Certifications Benefit My Clients</h2>
+                <ul class="benefits-list">
+                    <li>Ensures up-to-date knowledge of industry best practices</li>
+                    <li>Demonstrates commitment to quality and continuous improvement</li>
+                    <li>Provides a broad skill set to tackle diverse project requirements</li>
+                    <li>Enables implementation of cutting-edge technologies in projects</li>
+                    <li>Ensures adherence to web standards and accessibility guidelines</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta" class="section">
+            <div class="container">
+                <h2>Ready to Work with a Certified Professional?</h2>
+                <p>Let's collaborate on your next web project!</p>
+                <a href="contact.html" class="btn-primary">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/certifications.js"></script>
+</body>
+</html>

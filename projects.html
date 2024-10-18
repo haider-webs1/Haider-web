@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="projects-hero" class="hero-section">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p>Showcasing My Best Work in Web Development and Design</p>
+            </div>
+        </section>
+
+        <!-- Project Overview -->
+        <section id="project-overview" class="section">
+            <div class="container">
+                <h2>Project Portfolio</h2>
+                <p>Welcome to my project showcase. Here, you'll find a diverse collection of web development and design projects that demonstrate my skills, creativity, and problem-solving abilities. From responsive websites to interactive web applications, each project represents a unique challenge and solution.</p>
+            </div>
+        </section>
+
+        <!-- Featured Project -->
+        <section id="featured-project" class="section">
+            <div class="container">
+                <h2>Featured Project</h2>
+                <div class="featured-project-container">
+                    <img src="img/project1.jpg" alt="Featured Project">
+                    <div class="featured-project-info">
+                        <h3>E-commerce Platform Redesign</h3>
+                        <p>A complete overhaul of an existing e-commerce platform, focusing on improving user experience, mobile responsiveness, and conversion rates. This project showcases my ability to handle large-scale web applications and implement modern design principles.</p>
+                        <ul class="project-highlights">
+                            <li>Increased mobile conversions by 35%</li>
+                            <li>Implemented a new, streamlined checkout process</li>
+                            <li>Integrated with multiple payment gateways</li>
+                            <li>Built a custom CMS for easy product management</li>
+                        </ul>
+                        <a href="#" class="btn-details">View Project Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Filter -->
+        <section id="projects-filter" class="section">
+            <div class="container">
+                <h2>Explore My Work</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web-development">Web Development</button>
+                    <button class="filter-btn" data-filter="ui-design">UI Design</button>
+                    <button class="filter-btn" data-filter="mobile-app">Mobile App</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section id="projects-grid" class="section">
+            <div class="container">
+                <div class="projects-container">
+                    <!-- Project items (as in the previous version) -->
+                    <!-- ... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Approach -->
+        <section id="project-approach" class="section">
+            <div class="container">
+                <h2>My Project Approach</h2>
+                <div class="approach-steps">
+                    <div class="approach-step">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>1. Concept & Planning</h3>
+                        <p>I begin each project with a thorough understanding of the client's needs and objectives. This phase involves brainstorming, research, and creating a detailed project roadmap.</p>
+                    </div>
+                    <div class="approach-step">
+                        <i class="fas fa-pencil-ruler"></i>
+                        <h3>2. Design & Prototyping</h3>
+                        <p>Next, I create wireframes and design mockups, focusing on user experience and visual appeal. This step often includes creating interactive prototypes for client feedback.</p>
+                    </div>
+                    <div class="approach-step">
+                        <i class="fas fa-code"></i>
+                        <h3>3. Development</h3>
+                        <p>With approved designs, I move on to development, writing clean, efficient, and well-documented code. I ensure responsive design and cross-browser compatibility throughout this phase.</p>
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="project-testimonials" class="section">
+            <div class="container">
+                <h2>Client Testimonials</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial">
+                        <p>"Haider's work on our e-commerce platform was exceptional. His attention to detail and innovative solutions significantly improved our user experience and sales."</p>
+                        - John Doe, CEO of TechMart
+                    </div>
+                    <div class="testimonial">
+                        <p>"Working with Haider was a pleasure. He took our vague idea and turned it into a beautiful, functional website that exceeded our expectations."</p>
+                        - Jane Smith, Marketing Director at CreativeMinds
+                    </div>
+                    <!-- Add more testimonials as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Stats -->
+        <section id="project-stats" class="section">
+            <div class="container">
+                <h2>Project Statistics</h2>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <h3>50+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>30+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modal (as in the previous version) -->
+        <!-- ... -->
+
+        <!-- Call to Action Section -->
+        <section id="cta" class="section">
+            <div class="container">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's collaborate and bring your ideas to life!</p>
+                <a href="contact.html" class="cta-button">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>

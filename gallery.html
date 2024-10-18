@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Gallery Hero Section -->
+        <section id="gallery-hero" class="hero-section">
+            <div class="container">
+                <h1>Project Gallery</h1>
+                <p>A visual showcase of my best web development and design work</p>
+            </div>
+        </section>
+
+        <!-- Gallery Filter -->
+        <section id="gallery-filter" class="section">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web-design">Web Design</button>
+                    <button class="filter-btn" data-filter="ux-ui">UX/UI</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section id="gallery-grid" class="section">
+            <div class="container">
+                <div class="gallery-items">
+                    <div class="gallery-item" data-category="web-design">
+                        <img src="img/project1.jpg" alt="E-commerce Website">
+                        <div class="item-overlay">
+                            <h3>E-commerce Website</h3>
+                            <p>A fully responsive online store built with React.js</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="ux-ui">
+                        <img src="img/project2.jpg" alt="Mobile App UI">
+                        <div class="item-overlay">
+                            <h3>HealthTech App UI</h3>
+                            <p>User interface design for a health tracking mobile application</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="branding">
+                        <img src="img/project3.jpg" alt="Brand Identity">
+                        <div class="item-overlay">
+                            <h3>Tech Startup Branding</h3>
+                            <p>Complete brand identity design for a tech startup</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="web-design">
+                        <img src="img/project1.jpg" alt="Portfolio Website">
+                        <div class="item-overlay">
+                            <h3>Photographer Portfolio</h3>
+                            <p>A minimalist portfolio website for a professional photographer</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="ux-ui">
+                        <img src="img/project2.jpg" alt="Dashboard Design">
+                        <div class="item-overlay">
+                            <h3>Analytics Dashboard</h3>
+                            <p>User-friendly dashboard design for a data analytics platform</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="branding">
+                        <img src="img/project3.jpg" alt="Logo Design">
+                        <div class="item-overlay">
+                            <h3>Eco-Friendly Logo</h3>
+                            <p>Logo design for an environmentally conscious brand</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <!-- Add more gallery items as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modal -->
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modal-title"></h2>
+                <img id="modal-image" src="" alt="Project Image">
+                <p id="modal-description"></p>
+                <div id="modal-tech"></div>
+                <a id="modal-link" href="#" target="_blank" class="btn-visit">Visit Project</a>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <section id="cta" class="section">
+            <div class="container">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's collaborate and bring your vision to life!</p>
+                <a href="contact.html" class="btn-primary">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

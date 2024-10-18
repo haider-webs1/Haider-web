@@ -1,0 +1,210 @@
+<style>
+    #personalSiteHeader {
+        background-color: #000000;
+        color: #FFFFFF;
+        padding: 1rem;
+        font-family: Arial, sans-serif;
+        position: relative;
+    }
+
+    #personalSiteHeader * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #personalSiteHeaderContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #personalSiteLogo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    #personalSiteNav ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    #personalSiteNav li {
+        margin-left: 1.5rem;
+    }
+
+    #personalSiteNav a {
+        color: #FFFFFF;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    #personalSiteNav a:hover,
+    #personalSiteNav a.active {
+        color: #3498DB;
+    }
+
+    #personalSiteMenuToggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        content: '';
+        display: block;
+        background-color: #FFFFFF;
+        height: 3px;
+        width: 30px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger::before {
+        transform: translateY(-8px);
+    }
+
+    .hamburger::after {
+        transform: translateY(5px);
+    }
+
+    @media (max-width: 768px) {
+        #personalSiteMenuToggle {
+            display: block;
+            z-index: 1000;
+        }
+
+        #personalSiteNav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #000000;
+            display: none;
+            padding: 1rem;
+            z-index: 999;
+        }
+
+        #personalSiteNav ul {
+            flex-direction: column;
+        }
+
+        #personalSiteNav li {
+            margin: 0.5rem 0;
+        }
+
+        #personalSiteMenuToggle.active .hamburger {
+            background-color: transparent;
+        }
+
+        #personalSiteMenuToggle.active .hamburger::before {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        #personalSiteMenuToggle.active .hamburger::after {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Ensure the nav is visible when toggled */
+        #personalSiteNav[style*="display: block"] {
+            display: block !important;
+        }
+    }
+</style>
+
+
+
+<header id="personalSiteHeader">
+    <div id="personalSiteHeaderContainer">
+        <div id="personalSiteLogo">Haider</div>
+        <button id="personalSiteMenuToggle" aria-label="Toggle menu">
+            <span class="hamburger"></span>
+        </button>
+        <nav id="personalSiteNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="events.html">Events</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+    (function() {
+        console.log("Header script is running");
+
+        var menuToggle = document.getElementById('personalSiteMenuToggle');
+        var nav = document.getElementById('personalSiteNav');
+
+        if (!menuToggle || !nav) {
+            console.error("Menu toggle or nav element not found");
+            return;
+        }
+
+        function toggleMenu() {
+            console.log("Toggling menu");
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+            menuToggle.classList.toggle('active');
+            console.log("Nav display:", nav.style.display);
+        }
+
+        menuToggle.addEventListener('click', function(event) {
+            console.log("Menu toggle clicked");
+            event.stopPropagation();
+            toggleMenu();
+        });
+
+        document.addEventListener('click', function(event) {
+            var isClickInside = nav.contains(event.target) || menuToggle.contains(event.target);
+            if (!isClickInside && nav.style.display === 'block') {
+                console.log("Clicking outside, closing menu");
+                toggleMenu();
+            }
+        });
+
+        var currentPage = window.location.pathname.split("/").pop();
+        var navLinks = document.querySelectorAll('#personalSiteNav a');
+        navLinks.forEach(function(link) {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    console.log("Link clicked, closing menu");
+                    toggleMenu();
+                }
+            });
+        });
+
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && nav.style.display === 'block') {
+                console.log("Window resized, resetting menu");
+                nav.style.display = '';
+                menuToggle.classList.remove('active');
+            }
+        });
+
+        console.log("Header script setup complete");
+    })();
+</script>

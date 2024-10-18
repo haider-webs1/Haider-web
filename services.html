@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="services-hero" class="hero-section">
+            <div class="container">
+                <h1>My Services</h1>
+                <p>Comprehensive Web Development and Design Solutions</p>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section id="services-overview" class="section">
+            <div class="container">
+                <h2>What I Offer</h2>
+                <p>As a seasoned front-end developer and designer, I offer a range of services to help businesses and individuals establish a strong online presence. From creating responsive websites to developing custom web applications, my goal is to deliver high-quality, user-centric digital solutions.</p>
+            </div>
+        </section>
+
+        <!-- Main Services -->
+        <section id="main-services" class="section">
+            <div class="container">
+                <h2>Core Services</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Web Development</h3>
+                        <p>Custom website development using the latest technologies and best practices to create fast, responsive, and scalable web solutions.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>UI/UX Design</h3>
+                        <p>User-centered design approach to create intuitive, aesthetically pleasing interfaces that enhance user experience and engagement.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Responsive Web Design</h3>
+                        <p>Ensuring your website looks great and functions flawlessly across all devices, from desktops to smartphones.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Service Breakdown -->
+        <section id="service-breakdown" class="section">
+            <div class="container">
+                <h2>Service Breakdown</h2>
+                <div class="service-tabs">
+                    <button class="tab-button active" data-tab="web-dev">Web Development</button>
+                    <button class="tab-button" data-tab="ui-design">UI/UX Design</button>
+                    <button class="tab-button" data-tab="responsive">Responsive Design</button>
+                    <button class="tab-button" data-tab="ecommerce">E-commerce</button>
+                </div>
+                <div class="tab-content active" id="web-dev">
+                    <h3>Web Development Services</h3>
+                    <ul>
+                        <li>Custom website development</li>
+                        <li>Web application development</li>
+                        <li>Front-end development (HTML, CSS, JavaScript)</li>
+                        <li>Back-end integration</li>
+                        <li>CMS implementation (WordPress, Drupal)</li>
+                        <li>API development and integration</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="ui-design">
+                    <h3>UI/UX Design Services</h3>
+                    <ul>
+                        <li>User research and analysis</li>
+                        <li>Wireframing and prototyping</li>
+                        <li>Visual design and branding</li>
+                        <li>Interaction design</li>
+                        <li>Usability testing</li>
+                        <li>Design system creation</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="responsive">
+                    <h3>Responsive Design Services</h3>
+                    <ul>
+                        <li>Mobile-first design approach</li>
+                        <li>Cross-browser compatibility</li>
+                        <li>Responsive images and media</li>
+                        <li>Performance optimization for mobile devices</li>
+                        <li>Touch-friendly interface design</li>
+                        <li>Responsive email templates</li>
+                    </ul>
+                </div>
+                <div class="tab-content" id="ecommerce">
+                    <h3>E-commerce Services</h3>
+                    <ul>
+                        <li>Custom e-commerce website development</li>
+                        <li>Shopping cart implementation</li>
+                        <li>Payment gateway integration</li>
+                        <li>Product catalog management</li>
+                        <li>Order processing and tracking</li>
+                        <li>Customer account management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="section">
+            <div class="container">
+                <h2>My Process</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Discovery</h3>
+                        <p>Understanding your goals, target audience, and project requirements.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Planning</h3>
+                        <p>Creating a detailed project roadmap and defining milestones.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Design</h3>
+                        <p>Crafting user-friendly interfaces and engaging user experiences.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Development</h3>
+                        <p>Building your solution using the latest technologies and best practices.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h3>Testing</h3>
+                        <p>Rigorous quality assurance to ensure a flawless end product.</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h3>Launch</h3>
+                        <p>Deploying your project and providing ongoing support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <!-- <section id="technologies" class="section">
+            <div class="container">
+                <h2>Technologies I Work With</h2>
+                <div class="tech-grid">
+                    <div class="tech-item"><img src="img/tech-html5.png" alt="HTML5"></div>
+                    <div class="tech-item"><img src="img/tech-css3.png" alt="CSS3"></div>
+                    <div class="tech-item"><img src="img/tech-javascript.png" alt="JavaScript"></div>
+                    <div class="tech-item"><img src="img/tech-react.png" alt="React"></div>
+                    <div class="tech-item"><img src="img/tech-vue.png" alt="Vue.js"></div>
+                    <div class="tech-item"><img src="img/tech-node.png" alt="Node.js"></div>
+                    <div class="tech-item"><img src="img/tech-sass.png" alt="Sass"></div>
+                    <div class="tech-item"><img src="img/tech-git.png" alt="Git"></div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="section">
+            <div class="container">
+                <h2>Pricing Plans</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-item">
+                        <h3>Basic</h3>
+                        <div class="price">$999</div>
+                        <ul>
+                            <li>5-page responsive website</li>
+                            <li>Basic SEO optimization</li>
+                            <li>Contact form integration</li>
+                            <li>1 month of support</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary">Choose Plan</a>
+                    </div>
+                    <div class="pricing-item featured">
+                        <h3>Pro</h3>
+                        <div class="price">$2499</div>
+                        <ul>
+                            <li>10-page responsive website</li>
+                            <li>Advanced SEO optimization</li>
+                            <li>E-commerce functionality</li>
+                            <li>Custom design</li>
+                            <li>3 months of support</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary">Choose Plan</a>
+                    </div>
+                    <div class="pricing-item">
+                        <h3>Enterprise</h3>
+                        <div class="price">Custom</div>
+                        <ul>
+                            <li>Unlimited pages</li>
+                            <li>Full-stack development</li>
+                            <li>Custom web applications</li>
+                            <li>Priority support</li>
+                            <li>Ongoing maintenance</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>What is your typical project timeline?</h3>
+                        <p>Project timelines vary depending on complexity, but a typical website project takes 4-8 weeks from start to finish.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you offer maintenance services after the project is complete?</h3>
+                        <p>Yes, I offer ongoing maintenance and support services to keep your website up-to-date and running smoothly.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can you work with existing websites or do you only create new ones?</h3>
+                        <p>I can work with both existing websites (redesigns or improvements) and create entirely new websites from scratch.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you provide content for the website?</h3>
+                        <p>While I can offer guidance on content strategy, clients are typically responsible for providing the content. I can recommend copywriters if needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta" class="section">
+            <div class="container">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's discuss how I can help bring your vision to life.</p>
+                <a href="contact.html" class="btn-primary">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

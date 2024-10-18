@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="blog-hero" class="hero-section">
+            <div class="container">
+                <h1>Blog</h1>
+                <p>Insights, Tips, and Trends in Web Development and Design</p>
+            </div>
+        </section>
+
+        <!-- Blog Content -->
+        <section id="blog-content" class="section">
+            <div class="container">
+                <div class="blog-grid">
+                    <!-- Main Content -->
+                    <div class="blog-main">
+                        <!-- Featured Post -->
+                        <article class="blog-post featured">
+                            <img src="img/project2.jpg" alt="Featured Post Image">
+                            <div class="post-content">
+                                <h2>The Future of Web Development: Trends to Watch in 2024</h2>
+                                <p class="post-meta">By Haider Ali | May 15, 2024 | Web Development</p>
+                                <p>As technology continues to evolve at a rapid pace, the world of web development is constantly changing. In this post, we'll explore the top trends that are shaping the future of web development in 2024 and beyond.</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Regular Posts -->
+                        <article class="blog-post">
+                            <img src="img/project1.jpg" alt="Post Image">
+                            <div class="post-content">
+                                <h2>10 Essential UI/UX Design Principles for Better Web Experiences</h2>
+                                <p class="post-meta">By Haider Ali | May 10, 2024 | Design</p>
+                                <p>Create more engaging and user-friendly websites by applying these 10 crucial UI/UX design principles. Learn how to enhance user experience and boost conversions.</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+
+                        <article class="blog-post">
+                            <img src="img/project2.jpg" alt="Post Image">
+                            <div class="post-content">
+                                <h2>Mastering Responsive Web Design: Tips and Techniques</h2>
+                                <p class="post-meta">By Haider Ali | May 5, 2024 | Web Development</p>
+                                <p>Discover advanced techniques for creating truly responsive websites that look great on all devices. From flexible grids to mobile-first approaches, we cover it all.</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+
+                        <article class="blog-post">
+                            <img src="img/project3.jpg" alt="Post Image">
+                            <div class="post-content">
+                                <h2>The Power of JavaScript Frameworks: React vs Vue vs Angular</h2>
+                                <p class="post-meta">By Haider Ali | April 30, 2024 | JavaScript</p>
+                                <p>Explore the strengths and weaknesses of today's most popular JavaScript frameworks. Learn which one might be the best fit for your next project.</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </article>
+
+                        <!-- Pagination -->
+                        <div class="pagination">
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">Next &raquo;</a>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="blog-sidebar">
+                        <!-- Search Widget -->
+                        <div class="sidebar-widget search-widget">
+                            <h3>Search</h3>
+                            <form>
+                                <input type="text" placeholder="Search blog...">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div>
+
+                        <!-- Categories Widget -->
+                        <div class="sidebar-widget categories-widget">
+                            <h3>Categories</h3>
+                            <ul>
+                                <li><a href="#">Web Development (15)</a></li>
+                                <li><a href="#">UI/UX Design (8)</a></li>
+                                <li><a href="#">JavaScript (12)</a></li>
+                                <li><a href="#">CSS Techniques (10)</a></li>
+                                <li><a href="#">Career Tips (5)</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Recent Posts Widget -->
+                        <div class="sidebar-widget recent-posts-widget">
+                            <h3>Recent Posts</h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/project1.jpg" alt="Recent Post">
+                                        <div>
+                                            <h4>Optimizing Web Performance</h4>
+                                            <p>May 1, 2024</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/project2.jpg" alt="Recent Post">
+                                        <div>
+                                            <h4>The Art of Clean Code</h4>
+                                            <p>April 25, 2024</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/project3.jpg" alt="Recent Post">
+                                        <div>
+                                            <h4>Mastering CSS Grid Layout</h4>
+                                            <p>April 20, 2024</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Tags Widget -->
+                        <div class="sidebar-widget tags-widget">
+                            <h3>Tags</h3>
+                            <div class="tag-cloud">
+                                <a href="#">HTML5</a>
+                                <a href="#">CSS3</a>
+                                <a href="#">JavaScript</a>
+                                <a href="#">React</a>
+                                <a href="#">Vue.js</a>
+                                <a href="#">Responsive</a>
+                                <a href="#">UX</a>
+                                <a href="#">Mobile</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="section">
+            <div class="container">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with the latest insights and trends in web development and design.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+</html>

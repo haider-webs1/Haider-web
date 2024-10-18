@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <style>
+        #personalSiteFooter {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 2rem 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #personalSiteFooter * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #personalSiteFooterContainer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #personalSiteFooterInfo,
+        #personalSiteFooterLinks,
+        #personalSiteFooterSocial {
+            flex: 1;
+            margin-bottom: 1rem;
+            min-width: 200px;
+        }
+
+        #personalSiteFooterInfo h3,
+        #personalSiteFooterLinks h3,
+        #personalSiteFooterSocial h3 {
+            color: #3498DB;
+            margin-bottom: 1rem;
+        }
+
+        #personalSiteFooterLinks ul {
+            list-style-type: none;
+        }
+
+        #personalSiteFooterLinks li {
+            margin-bottom: 0.5rem;
+        }
+
+        #personalSiteFooterLinks a,
+        #personalSiteFooterSocial a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        #personalSiteFooterLinks a:hover,
+        #personalSiteFooterSocial a:hover {
+            color: #3498DB;
+        }
+
+        #personalSiteFooterSocial ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        #personalSiteFooterSocial li {
+            margin-right: 1rem;
+        }
+
+        #personalSiteFooterCopyright {
+            text-align: center;
+            padding-top: 2rem;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            #personalSiteFooterContainer {
+                flex-direction: column;
+            }
+
+            #personalSiteFooterInfo,
+            #personalSiteFooterLinks,
+            #personalSiteFooterSocial {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer id="personalSiteFooter">
+        <div id="personalSiteFooterContainer">
+            <div id="personalSiteFooterInfo">
+                <h3>Haider Ali</h3>
+                <p>Full Stack Web Developer</p>
+                <p>Email: haiderali@gmail.com</p>
+                <p>Phone: +61 492 055 461</p>
+            </div>
+            <div id="personalSiteFooterLinks">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="personalSiteFooterSocial">
+                <h3>Connect</h3>
+                <ul>
+                    <li><a href="#" target="_blank">LinkedIn</a></li>
+                    <li><a href="#" target="_blank">GitHub</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                </ul>
+            </div>
+            <div id="personalSiteFooterCopyright">
+                <p>&copy; <span id="personalSiteFooterYear"></span> Haider Ali. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // Set current year in copyright
+            var currentYear = new Date().getFullYear();
+            document.getElementById('personalSiteFooterYear').textContent = currentYear;
+
+            // Highlight current page in footer links
+            var currentPage = window.location.pathname.split("/").pop();
+            var footerLinks = document.querySelectorAll('#personalSiteFooterLinks a');
+            footerLinks.forEach(function(link) {
+                if (link.getAttribute('href') === currentPage) {
+                    link.style.fontWeight = 'bold';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

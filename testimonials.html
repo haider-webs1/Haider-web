@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Testimonials - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="testimonials-hero" class="hero-section">
+            <div class="container">
+                <h1>Client Testimonials</h1>
+                <p>Hear What My Clients Have to Say</p>
+            </div>
+        </section>
+
+        <!-- Testimonials Overview -->
+        <section id="testimonials-overview" class="section">
+            <div class="container">
+                <h2>Why Clients Love Working with Me</h2>
+                <p>I take pride in delivering exceptional web development and design services. Here's what some of my satisfied clients have to say about their experiences working with me.</p>
+            </div>
+        </section>
+
+        <!-- Featured Testimonial -->
+        <section id="featured-testimonial" class="section">
+            <div class="container">
+                <div class="featured-testimonial-content">
+                    <img src="img/client4.jpg" alt="John Doe" class="client-image">
+                    <blockquote>
+                        "Haider's expertise in web development transformed our online presence. His attention to detail and innovative solutions significantly improved our user experience and conversions. We couldn't be happier with the results!"
+                    </blockquote>
+                    - John Doe, CEO of TechInnovate
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Grid -->
+        <section id="testimonial-grid" class="section">
+            <div class="container">
+                <h2>More Client Feedback</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-item">
+                        <img src="img/client1.jpg" alt="Sarah Johnson" class="client-image">
+                        <p>"Working with Haider was a pleasure. He took our vague idea and turned it into a beautiful, functional website that exceeded our expectations."</p>
+                        - Sarah Johnson, Marketing Director at CreativeMinds
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="img/client2.jpg" alt="Michael Chen" class="client-image">
+                        <p>"Haider's responsive design skills are top-notch. Our new website looks great on all devices, and we've seen a significant increase in mobile engagement."</p>
+                        - Michael Chen, Founder of MobiTech
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="img/client3.jpg" alt="Emily Rodriguez" class="client-image">
+                        <p>"The e-commerce solution Haider developed for us has streamlined our online sales process. His attention to detail and user experience design is impressive."</p>
+                        - Emily Rodriguez, Owner of Boutique Bliss
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Testimonials
+        <section id="video-testimonials" class="section">
+            <div class="container">
+                <h2>Video Testimonials</h2>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <p>John Doe from TechInnovate shares his experience</p>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <p>Sarah Johnson discusses the impact on CreativeMinds</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Testimonial Slider -->
+        <section id="testimonial-slider" class="section">
+            <div class="container">
+                <h2>More Success Stories</h2>
+                <div class="slider-container">
+                    <div class="slider-item">
+                        <p>"Haider's work on our website redesign was exceptional. He delivered on time and exceeded our expectations."</p>
+                        - Alex Thompson, CEO of Innovate Labs
+                    </div>
+                    <div class="slider-item">
+                        <p>"The custom CMS Haider developed has made managing our content so much easier. Highly recommended!"</p>
+                        - Lisa Chen, Content Manager at TechBlog
+                    </div>
+                    <div class="slider-item">
+                        <p>"Haider's expertise in UI/UX design significantly improved our app's user engagement. A true professional!"</p>
+                        - Mark Williams, Product Manager at AppSolutions
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button id="prevBtn" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextBtn" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Client Logos -->
+        <section id="client-logos" class="section">
+            <div class="container">
+                <h2>Trusted by Industry Leaders</h2>
+                <div class="logo-grid">
+                    <img src="img/client1.jpg" alt="Client Logo 1">
+                    <img src="img/client2.jpg" alt="Client Logo 2">
+                    <img src="img/client3.jpg" alt="Client Logo 3">
+                    <img src="img/client4.jpg" alt="Client Logo 4">
+                    <img src="img/client1.jpg" alt="Client Logo 5">
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta" class="section">
+            <div class="container">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's create something amazing together.</p>
+                <a href="contact.html" class="btn-primary">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/testimonials.js"></script>
+</body>
+</html>

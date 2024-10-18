@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- FAQ Hero Section -->
+        <section id="faq-hero" class="hero-section">
+            <div class="container">
+                <h1>Frequently Asked Questions</h1>
+                <p>Find answers to common questions about my services and process</p>
+            </div>
+        </section>
+
+        <!-- FAQ Search -->
+        <section id="faq-search" class="section">
+            <div class="container">
+                <div class="search-container">
+                    <input type="text" id="faqSearch" placeholder="Search FAQ...">
+                    <button id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Categories -->
+        <section id="faq-categories" class="section">
+            <div class="container">
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="services">Services</button>
+                    <button class="category-btn" data-category="process">Process</button>
+                    <button class="category-btn" data-category="pricing">Pricing</button>
+                    <button class="category-btn" data-category="technical">Technical</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ List -->
+        <section id="faq-list" class="section">
+            <div class="container">
+                <div class="faq-container">
+                    <div class="faq-item" data-category="services">
+                        <h3>What services do you offer?</h3>
+                        <div class="faq-answer">
+                            <p>I offer a range of web development and design services, including:</p>
+                            <ul>
+                                <li>Custom website development</li>
+                                <li>Responsive web design</li>
+                                <li>E-commerce solutions</li>
+                                <li>Web application development</li>
+                                <li>UI/UX design</li>
+                                <li>Website maintenance and support</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-category="process">
+                        <h3>What is your typical project process?</h3>
+                        <div class="faq-answer">
+                            <p>My project process typically includes the following steps:</p>
+                            <ol>
+                                <li>Initial consultation and requirements gathering</li>
+                                <li>Proposal and contract agreement</li>
+                                <li>Design concept and wireframing</li>
+                                <li>Development and coding</li>
+                                <li>Testing and quality assurance</li>
+                                <li>Client review and feedback</li>
+                                <li>Launch and post-launch support</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-category="pricing">
+                        <h3>How do you determine project pricing?</h3>
+                        <div class="faq-answer">
+                            <p>Project pricing is determined based on several factors, including:</p>
+                            <ul>
+                                <li>Project scope and complexity</li>
+                                <li>Estimated time and resources required</li>
+                                <li>Specific features and functionality needed</li>
+                                <li>Any third-party integrations or services</li>
+                            </ul>
+                            <p>I provide detailed quotes after the initial consultation and requirements gathering phase.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item" data-category="technical">
+                        <h3>What technologies do you work with?</h3>
+                        <div class="faq-answer">
+                            <p>I work with a variety of modern web technologies, including:</p>
+                            <ul>
+                                <li>HTML5, CSS3, and JavaScript</li>
+                                <li>React.js and Vue.js for front-end development</li>
+                                <li>Node.js for back-end development</li>
+                                <li>WordPress for content management systems</li>
+                                <li>Responsive frameworks like Bootstrap</li>
+                                <li>Version control with Git</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Add more FAQ items as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="faq-cta" class="section">
+            <div class="container">
+                <h2>Didn't find your answer?</h2>
+                <p>Feel free to reach out, and I'll be happy to help!</p>
+                <a href="contact.html" class="btn-primary">Contact Me</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>

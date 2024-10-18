@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Portfolio Hero Section -->
+        <section id="portfolio-hero" class="hero-section">
+            <div class="container">
+                <h1>My Portfolio</h1>
+                <p>Showcasing my best work in web development and design</p>
+            </div>
+        </section>
+
+        <!-- Portfolio Filter -->
+        <section id="portfolio-filter" class="section">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web-development">Web Development</button>
+                    <button class="filter-btn" data-filter="ui-design">UI Design</button>
+                    <button class="filter-btn" data-filter="mobile-app">Mobile App</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Grid -->
+        <section id="portfolio-grid" class="section">
+            <div class="container">
+                <div class="portfolio-items">
+                    <div class="portfolio-item" data-category="web-development">
+                        <img src="img/project1.jpg" alt="E-commerce Website">
+                        <div class="item-overlay">
+                            <h3>E-commerce Website</h3>
+                            <p>A fully responsive online store built with React.js</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="ui-design">
+                        <img src="img/project2.jpg" alt="Dashboard UI Design">
+                        <div class="item-overlay">
+                            <h3>Dashboard UI Design</h3>
+                            <p>A modern and intuitive dashboard design for a data analytics platform</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="mobile-app">
+                        <img src="img/project3.jpg" alt="Fitness Tracking App">
+                        <div class="item-overlay">
+                            <h3>Fitness Tracking App</h3>
+                            <p>A mobile app designed and developed to help users track their fitness goals</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="web-development">
+                        <img src="img/project1.jpg" alt="Portfolio Website">
+                        <div class="item-overlay">
+                            <h3>Portfolio Website</h3>
+                            <p>A sleek, modern portfolio website designed and developed from scratch</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="ui-design">
+                        <img src="img/project3.jpg" alt="Social Media App UI">
+                        <div class="item-overlay">
+                            <h3>Social Media App UI</h3>
+                            <p>A clean and engaging user interface design for a new social media platform</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item" data-category="web-development">
+                        <img src="img/project2.jpg" alt="Blog Platform">
+                        <div class="item-overlay">
+                            <h3>Blog Platform</h3>
+                            <p>A customizable blog platform with a user-friendly content management system</p>
+                            <a href="#" class="btn-view-project">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Modal -->
+        <div id="project-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2 id="modal-title"></h2>
+                <img id="modal-image" src="" alt="Project Image">
+                <p id="modal-description"></p>
+                <div id="modal-tech"></div>
+                <a id="modal-link" href="#" target="_blank" class="btn-visit">Visit Project</a>
+            </div>
+        </div>
+
+        <!-- Skills Showcase -->
+        <section id="skills-showcase" class="section">
+            <div class="container">
+                <h2>Skills & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-vuejs"></i>
+                        <span>Vue.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="section">
+            <div class="container">
+                <h2>Client Testimonials</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p>"Haider's work on our e-commerce platform was exceptional. His attention to detail and innovative solutions significantly improved our user experience and sales."</p>
+                        - John Doe, CEO of TechMart
+                    </div>
+                    <div class="testimonial">
+                        <p>"Working with Haider was a pleasure. He took our vague idea and turned it into a beautiful, functional website that exceeded our expectations."</p>
+                        - Jane Smith, Marketing Director at CreativeMinds
+                    </div>
+                    <div class="testimonial">
+                        <p>"Haider's expertise in responsive design helped us reach a wider audience. Our mobile traffic has increased by 40% since the launch of our new website."</p>
+                        - Mike Johnson, Founder of MobiTech
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta" class="section">
+            <div class="container">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Let's work together to bring your ideas to life!</p>
+                <a href="contact.html" class="btn-primary">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

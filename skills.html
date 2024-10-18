@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="skills-hero" class="hero-section">
+            <div class="container">
+                <h1>My Skills</h1>
+                <p>Expertise in Web Development and Design</p>
+            </div>
+        </section>
+
+        <!-- Skills Overview Section -->
+        <section id="skills-overview" class="section">
+            <div class="container">
+                <h2>Skills Overview</h2>
+                <p>As a front-end developer and designer, I've honed a diverse set of skills that allow me to create beautiful, functional, and user-friendly web experiences. Here's an overview of my key competencies:</p>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <i class="fas fa-code"></i>
+                        <h3>Front-End Development</h3>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Web Design</h3>
+                        <ul>
+                            <li>UI/UX Design</li>
+                            <li>Responsive Design</li>
+                            <li>Wireframing</li>
+                            <li>Prototyping</li>
+                            <li>Adobe Creative Suite</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Mobile Development</h3>
+                        <ul>
+                            <li>Responsive Web Design</li>
+                            <li>Progressive Web Apps</li>
+                            <li>Mobile-First Approach</li>
+                            <li>Touch-friendly Interfaces</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skill Proficiency Section -->
+        <section id="skill-proficiency" class="section">
+            <div class="container">
+                <h2>Skill Proficiency</h2>
+                <p>Here's a more detailed look at my proficiency levels in various skills:</p>
+                <div class="proficiency-grid">
+                    <div class="proficiency-item">
+                        <h4>HTML5</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 95%;" data-value="95"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <h4>CSS3</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;" data-value="90"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <h4>JavaScript</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;" data-value="85"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <h4>React.js</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;" data-value="80"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <h4>UI/UX Design</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;" data-value="75"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <h4>Responsive Design</h4>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;" data-value="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Projects Section -->
+        <section id="recent-projects" class="section">
+            <div class="container">
+                <h2>Skills in Action</h2>
+                <p>Here are some recent projects where I've applied my skills:</p>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <img src="img/project1.jpg" alt="E-commerce Website">
+                        <h3>E-commerce Website</h3>
+                        <p>A fully responsive online store built with React.js and integrated with a headless CMS.</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                    <div class="project-item">
+                        <img src="img/project2.jpg" alt="Portfolio Website">
+                        <h3>Portfolio Website</h3>
+                        <p>A sleek, modern portfolio website designed and developed from scratch using HTML5, CSS3, and JavaScript.</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                    <div class="project-item">
+                        <img src="img/project3.jpg" alt="Mobile App UI">
+                        <h3>Mobile App UI</h3>
+                        <p>A user-friendly mobile app interface designed using Adobe XD and implemented with React Native.</p>
+                        <a href="#" class="btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Continuous Learning Section -->
+        <section id="continuous-learning" class="section">
+            <div class="container">
+                <h2>Continuous Learning</h2>
+                <p>I'm always expanding my skill set. Here are some areas I'm currently focusing on:</p>
+                <ul class="learning-list">
+                    <li><i class="fas fa-book"></i> Advanced React Patterns</li>
+                    <li><i class="fas fa-laptop-code"></i> TypeScript</li>
+                    <li><i class="fas fa-server"></i> Node.js and Express.js</li>
+                    <li><i class="fas fa-database"></i> GraphQL</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section id="cta" class="section">
+            <div class="container">
+                <h2>Let's Put My Skills to Work for You</h2>
+                <p>Interested in collaborating on a project? Let's discuss how my skills can benefit your team or business.</p>
+                <a href="contact.html" class="cta-button">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/skills.js"></script>
+</body>
+</html>

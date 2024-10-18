@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Events Hero Section -->
+        <section id="events-hero" class="hero-section">
+            <div class="container">
+                <h1>Upcoming Events</h1>
+                <p>Join me at these exciting web development and design events</p>
+            </div>
+        </section>
+
+        <!-- Featured Event -->
+        <section id="featured-event" class="section">
+            <div class="container">
+                <h2>Featured Event</h2>
+                <div class="featured-event-content">
+                    <img src="img/event1.jpg" alt="Web Development Conference 2024">
+                    <div class="event-details">
+                        <h3>Web Development Conference 2024</h3>
+                        <p class="event-date"><i class="fas fa-calendar-alt"></i> November 15-17, 2024</p>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Cannberra, Aus</p>
+                        <p>Join me at the biggest web development conference of the year! I'll be speaking about "The Future of Front-End Development" and sharing insights on emerging technologies.</p>
+                        <a href="#" class="btn-register">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event List -->
+        <section id="event-list" class="section">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="event-grid">
+                    <div class="event-item">
+                        <img src="img/event1.jpg" alt="React Workshop">
+                        <div class="event-info">
+                            <h3>Advanced React Workshop</h3>
+                            <p class="event-date"><i class="fas fa-calendar-alt"></i> August 5, 2025</p>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Sydney, Aus</p>
+                            <p>A hands-on workshop covering advanced React concepts and best practices.</p>
+                            <a href="#" class="btn-details">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <img src="img/event2.jpg" alt="UX Design Meetup">
+                        <div class="event-info">
+                            <h3>UX Design Meetup</h3>
+                            <p class="event-date"><i class="fas fa-calendar-alt"></i> August 20, 2025</p>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i>  Perth, Australia</p>
+                            <p>Join fellow UX designers for an evening of networking and knowledge sharing.</p>
+                            <a href="#" class="btn-details">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <img src="img/event3.jpg" alt="Web Performance Summit">
+                        <div class="event-info">
+                            <h3>Web Performance Summit</h3>
+                            <p class="event-date"><i class="fas fa-calendar-alt"></i> September 10, 2025</p>
+                            <p class="event-location"><i class="fas fa-map-marker-alt"></i> Chicago, IL</p>
+                            <p>Learn about the latest techniques to optimize website performance and user experience.</p>
+                            <a href="#" class="btn-details">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Past Events -->
+        <section id="past-events" class="section">
+            <div class="container">
+                <h2>Past Events</h2>
+                <div class="past-events-slider">
+                    <div class="past-event-item">
+                        <img src="img/event4.jpg" alt="JavaScript Conference 2022">
+                        <div class="past-event-info">
+                            <h3>JavaScript Conference 2022</h3>
+                            <p>Presented on "Modern JavaScript Frameworks" to an audience of 500+ developers.</p>
+                        </div>
+                    </div>
+                    <div class="past-event-item">
+                        <img src="img/event1.jpg" alt="Design Systems Workshop">
+                        <div class="past-event-info">
+                            <h3>Design Systems Workshop</h3>
+                            <p>Led a hands-on workshop on creating and implementing effective design systems.</p>
+                        </div>
+                    </div>
+                    <div class="past-event-item">
+                        <img src="img/event4.jpg" alt="Web Accessibility Seminar">
+                        <div class="past-event-info">
+                            <h3>Web Accessibility Seminar</h3>
+                            <p>Discussed the importance of web accessibility and demonstrated practical implementation techniques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta" class="section">
+            <div class="container">
+                <h2>Want to Book Me for Your Event?</h2>
+                <p>I'm available for speaking engagements, workshops, and conferences.</p>
+                <a href="contact.html" class="btn-primary">Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/events.js"></script>
+</body>
+</html>

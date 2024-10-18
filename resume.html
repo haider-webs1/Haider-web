@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Haider Ali | Front-End Developer & Designer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Inclusion -->
+    <div id="headerContainer"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('headerContainer').innerHTML = data;
+                var scripts = document.getElementById('headerContainer').getElementsByTagName('script');
+                for (var i = 0; i < scripts.length; i++) {
+                    eval(scripts[i].innerHTML);
+                }
+            });
+    </script>
+
+    <main>
+        <!-- Resume Header -->
+        <section id="resume-header" class="section">
+            <div class="container">
+                <div class="resume-header-content">
+                    <img src="img/profile.png" alt="Haider Ali" class="profile-picture">
+                    <div class="resume-title">
+                        <h1>Haider Ali</h1>
+                        <h2>Front-End Developer & Designer</h2>
+                    </div>
+                </div>
+                <div class="resume-contact">
+                    <p><i class="fas fa-envelope"></i> haider.ali@email.com</p>
+                    <p><i class="fas fa-phone"></i> +61 492 055 461</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Canberra, Australia</p>
+                    <p><i class="fas fa-globe"></i> www.haider.midshort.com</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Summary -->
+        <section id="professional-summary" class="section">
+            <div class="container">
+                <h2 class="section-title">Professional Summary</h2>
+                <p>Experienced Front-End Developer and Designer with over 5 years of expertise in creating responsive and user-friendly web applications. Proficient in HTML, CSS, JavaScript, and modern frameworks like React and Vue.js. Strong eye for design and a passion for creating seamless user experiences.</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Front-End Development</h3>
+                        <ul>
+                            <li>HTML5</li>
+                            <li>CSS3 / Sass</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Vue.js</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Design</h3>
+                        <ul>
+                            <li>UI/UX Design</li>
+                            <li>Responsive Web Design</li>
+                            <li>Adobe Creative Suite</li>
+                            <li>Figma</li>
+                            <li>Sketch</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Other</h3>
+                        <ul>
+                            <li>Git / Version Control</li>
+                            <li>RESTful APIs</li>
+                            <li>Performance Optimization</li>
+                            <li>Cross-Browser Compatibility</li>
+                            <li>Agile / Scrum Methodologies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section id="work-experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Senior Front-End Developer</h3>
+                            <h4>TechInnovate Solutions</h4>
+                            <p class="date">January 2020 - Present</p>
+                            <ul>
+                                <li>Lead a team of 5 developers in creating responsive web applications</li>
+                                <li>Implemented modern front-end architectures using React and Vue.js</li>
+                                <li>Improved website performance by 40% through optimization techniques</li>
+                                <li>Collaborated with UX designers to implement intuitive user interfaces</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Front-End Developer</h3>
+                            <h4>WebSphere Inc.</h4>
+                            <p class="date">June 2017 - December 2019</p>
+                            <ul>
+                                <li>Developed and maintained responsive websites for various clients</li>
+                                <li>Implemented new features and optimized existing codebase</li>
+                                <li>Worked closely with back-end developers to integrate APIs</li>
+                                <li>Mentored junior developers and conducted code reviews</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Junior Web Developer</h3>
+                            <h4>Digital Creations Co.</h4>
+                            <p class="date">September 2015 - May 2017</p>
+                            <ul>
+                                <li>Assisted in the development of responsive websites using HTML, CSS, and JavaScript</li>
+                                <li>Collaborated with the design team to implement pixel-perfect layouts</li>
+                                <li>Participated in client meetings and contributed to project planning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-item">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <h4>Wentworth institute of Technology</h4>
+                    <p class="date">Graduated: May 2024</p>
+                </div>
+                <div class="education-item">
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <h4>University of Technology</h4>
+                    <p class="date">Graduated: May 2020</p>
+                </div>
+                <div class="education-item">
+                    <h3>Full Stack Web Development Bootcamp</h3>
+                    <h4>CodeCamp Academy</h4>
+                    <p class="date">Completed: August 2018</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Key Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-item">
+                        <h3>E-commerce Platform Redesign</h3>
+                        <p>Led the redesign of a major e-commerce platform, improving user experience and mobile responsiveness. Resulted in a 35% increase in mobile conversions.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Real-time Analytics Dashboard</h3>
+                        <p>Developed a real-time analytics dashboard using React and D3.js, providing clients with instant insights into their business metrics.</p>
+                    </div>
+                    <div class="project-item">
+                        <h3>Community Forum Application</h3>
+                        <p>Built a responsive community forum application using Vue.js and Firebase, supporting real-time updates and user authentication.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards and Certifications -->
+        <section id="awards" class="section">
+            <div class="container">
+                <h2 class="section-title">Awards and Certifications</h2>
+                <ul class="awards-list">
+                    <li>Google Certified Mobile Web Specialist (2022)</li>
+                    <li>Best Web Design Award, New York Web Design Awards (2021)</li>
+                    <li>React.js Certification, Facebook Developer Circle (2020)</li>
+                    <li>JavaScript ES6 Certification, Udacity (2019)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Download Resume -->
+        <section id="download-resume" class="section">
+            <div class="container">
+                <h2>Download Full Resume</h2>
+                <a href="path/to/resume.pdf" download class="btn-download">Download PDF <i class="fas fa-download"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Inclusion -->
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('beforeend', data);
+            });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/resume.js"></script>
+</body>
+</html>
